@@ -28,7 +28,6 @@ class User extends Person {
     }
 }
 
-// Fetching and displaying data
 const users = [];
 const rowsPerPage = 10;
 let currentPage = 1;
@@ -68,6 +67,7 @@ function displayUsers() {
             <td>${user.phoneNumber}</td>
             <td>${user.job}</td>
             <td>${user.company}</td>
+            <td>${user.birthdate.getUTCFullYear()}</td>
             <td>${user.calculateAge()}</td>
             <td>${user.isRetired() ? 'Yes' : 'No'}</td>
         `;
